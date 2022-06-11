@@ -1,0 +1,318 @@
+@charset "utf-8";
+
+header, .nowPage, .search, footer {
+    width: 1400px;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+
+
+/* 검색바 */
+
+.search {
+    position: relative;
+    height: 130px;
+}
+
+.search>form {
+    display: inline-block;
+    width: 400px;
+    margin-left: 800px;
+    margin-top: 20px;
+}
+#searchbar {
+    width: 350px;
+    height: 50px;
+    border: 0px;
+    border-bottom: 1px solid #666;
+    box-sizing: border-box;
+}
+
+.search>form>button {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    position: absolute;
+    background-color: #fff;
+}
+
+/* 영화 공통 */
+
+section {
+    width: 1400px;
+    height: 480px;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+
+section>h2 {
+    text-align: center;
+    height: 70px;
+    font-size: 2em;
+}
+
+section>h2>span {
+    color: red;
+}
+
+section>h2>p {
+    font-size: 0.3em;
+    float: right;
+    margin: 25px 10px 0 0;
+}
+
+section>h2>p:hover {
+    color: red;
+}
+
+section>ul {
+    display: inline;
+    float: left;
+}
+
+section>ul>li {
+    float: left;
+    width: 220px;
+    height: 410px;
+    margin-right: 24px;
+}
+
+section>ul>li>p {
+    text-align: center;
+    color: black;
+}
+
+section>ul>li>p:nth-child(2) {
+    margin-bottom: 12px;
+}
+
+section>ul>li>p:nth-child(2) {
+    font-weight: bold;
+}
+
+section>ul>li>p:nth-child(3) {
+    font-size: 0.7em;
+}
+
+section>ul>li:last-child {
+    margin-right: 0;
+}
+
+section>ul>li>div {
+    display: inline-block;
+    width: 220px;
+    height: 315px;
+    background-color: black;
+    margin-bottom: 23px;
+}
+
+section>ul>li>div>span {
+    position: absolute;
+    margin: 0 0 9px 12px;
+    font-size: 2.5em;
+    font-style: italic;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+
+section>ul>li>div>div {
+    position: absolute;
+    visibility: hidden;
+}
+
+section>ul>li>div>div>span {
+    color: white;
+    display: inline-block;
+    width: 220px;
+    padding: 15px 20px;
+    height: 220px;
+    box-sizing: border-box;
+    white-space:normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: justify;
+}
+
+section>ul>li>div>div>p {
+    width: 180px;
+    margin-top: 15px;
+}
+
+section>ul>li>div>div>p>a {
+    display: inline-block;
+    height: 30px;
+    width: 84px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid white;
+    color: white;
+    margin-top: 20px;
+}
+
+section>ul>li>div>div>p>a:nth-child(1) {
+    margin-right: 8px;
+}
+
+section>ul>li>div>div>p>a:hover {
+    background-color: rgba(255,255,255,0.3);
+    font-weight: bold;
+}
+
+
+/* 현재 상영작 */
+
+.nowMovie>ul>li>p:nth-child(3)>span {
+    color: #ffcc00;
+}
+
+/* 현재상영작 1 */
+.nowMovie>ul>li:nth-child(1)>div {
+    background-image: url(../img/nowmovie_1.jpg);
+}
+.nowMovie>ul>li:nth-child(1)>div:hover #nm1 {
+    width: inherit;
+    height: inherit;
+    visibility: visible;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    text-align: justify;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* 현재상영작 2 */
+.nowMovie>ul>li:nth-child(2)>div {
+    background-image: url(../img/nowmovie_2.jpg);
+}
+.nowMovie>ul>li:nth-child(2)>div:nth-child(1):hover #nm2 {
+    width: inherit;
+    height: inherit;
+    visibility: visible;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    text-align: justify;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* 현재상영작 3 */
+.nowMovie>ul>li:nth-child(3)>div {
+    background-image: url(../img/nowmovie_3.jpg);
+}
+.nowMovie>ul>li:nth-child(3)>div:nth-child(1):hover #nm3 {
+    width: inherit;
+    height: inherit;
+    visibility: visible;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    text-align: justify;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* 현재상영작 4 */
+.nowMovie>ul>li:nth-child(4)>div {
+    background-image: url(../img/nowmovie_4.jpg);
+}
+.nowMovie>ul>li:nth-child(4)>div:nth-child(1):hover #nm4 {
+    width: inherit;
+    height: inherit;
+    visibility: visible;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    text-align: justify;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* 현재상영작 5 */
+.nowMovie>ul>li:nth-child(5)>div {
+    background-image: url(../img/nowmovie_5.jpg);
+}
+.nowMovie>ul>li:nth-child(5)>div:nth-child(1):hover #nm5 {
+    width: inherit;
+    height: inherit;
+    visibility: visible;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    text-align: justify;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* 상영 예정작 */
+
+.comming>ul>li>p:nth-child(3)>span {
+    color: red;
+}
+
+.comming {
+    margin-top: 50px;
+}
+
+/* 상영예정작 1 */
+.comming>ul>li:nth-child(1)>div {
+    background-image: url(../img/comming_1.jpg);
+}
+.comming>ul>li:nth-child(1)>div:hover #cm1 {
+    width: inherit;
+    height: inherit;
+    visibility: visible;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    text-align: justify;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* 상영예정작 2 */
+.comming>ul>li:nth-child(2)>div {
+    background-image: url(../img/comming_2.jpg);
+}
+.comming>ul>li:nth-child(2)>div:hover #cm2 {
+    width: inherit;
+    height: inherit;
+    visibility: visible;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    text-align: justify;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* 상영예정작 3 */
+.comming>ul>li:nth-child(3)>div {
+    background-image: url(../img/comming_3.jpg);
+}
+.comming>ul>li:nth-child(3)>div:hover #cm3 {
+    width: inherit;
+    height: inherit;
+    visibility: visible;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    text-align: justify;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* 상영예정작 4 */
+.comming>ul>li:nth-child(4)>div {
+    background-image: url(../img/comming_4.jpg);
+}
+.comming>ul>li:nth-child(4)>div:hover #cm4 {
+    width: inherit;
+    height: inherit;
+    visibility: visible;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    text-align: justify;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* 상영예정작 5 */
+.comming>ul>li:nth-child(5)>div {
+    background-image: url(../img/comming_5.jpg);
+}
+.comming>ul>li:nth-child(5)>div:hover #cm5 {
+    width: inherit;
+    height: inherit;
+    visibility: visible;
+    font-size: 0.8em;
+    line-height: 1.3em;
+    text-align: justify;
+    background-color: rgba(0,0,0,0.7);
+}
+

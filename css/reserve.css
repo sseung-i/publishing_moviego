@@ -1,0 +1,662 @@
+@charset "utf-8";
+
+
+header, section, .nowPage, footer {
+    width: 1400px;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+
+
+/* 인풋타입 */
+
+input {
+    display: none;
+}
+
+/* 나이 */
+
+.age12, .age15, .ageall {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    margin-right: 10px;
+}
+
+.age12 {
+    background-color: #00c0ff;
+}
+
+.age15 {
+    background-color: #ffcc00;
+}
+
+.ageall {
+    background-color: #00ae00;
+}
+
+
+/* 영화관별/영화별 시작 */
+
+.choice {
+    height: 660px;
+}
+
+.choice>h2 {
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+    font-size: 2em;
+}
+
+.choice>div {
+    width: 1200px;
+    height: 450px;
+    border-radius: 30px;
+    border: 3px solid #ddd;
+}
+
+.choice>div>ul {
+    display: inline;
+}
+.choice>div>ul>li {
+    width: 600px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    float: left;
+    cursor: pointer;
+}
+
+#cinemaBgcolor {
+    background-color: white;
+    border-radius: 27px 0 0 0 ;
+}
+
+#movieBgcolor {
+    background-color: #eee;
+    border-radius: 0 27px 0 0 ;
+}
+
+.choice>div>ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 영화관별 */
+
+#cinema {
+    position: absolute;
+    width: 1200px;
+    height: 400px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+#cinema>ul {
+    width: 1100px;
+    height: 30px;
+    margin-top: 40px;
+}
+
+#cinema>ul:nth-child(1)>li {
+    display: inline-block;
+    height: 30px;
+    padding: 0 20px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.cinemaClick {
+    background-color: red;
+    border-radius: 15px;
+    color: white;
+
+}
+
+
+#cinema>form {
+    position: absolute;
+    width: 1100px;
+    width: 100%;
+    margin: 50px 0;
+}
+
+#cinema>form>label {
+    display: inline-block;
+    width: 150px;
+    margin-right: 75px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+#cinema>form>label:hover{
+    border-left: 5px solid red;
+    padding-left: 10px;
+    box-sizing: border-box;
+    color: red;
+}
+
+
+.placeClick {
+    border-left: 5px solid red;
+    padding-left: 10px;
+    box-sizing: border-box;
+    color: red;
+}
+
+/* 영화관별 > 시작할때 기본 선택 */
+
+#cinema>form>ul>li:nth-child(1)>ul>li:nth-child(1) {
+    border-left: 5px solid red;
+    padding-left: 10px;
+}
+
+.select {
+    height: 700px;
+    margin-bottom: 50px;
+}
+
+/* 영화관별 > 영화/날짜/시간 */
+
+#cinema_select{
+    position: absolute;
+    width: 1200px;
+    border: 3px solid #ddd;
+    border-radius: 30px;
+    margin-bottom: 54px;
+}
+
+#cinema_select>h2 {
+    display: inline-block;
+    height: 85px;
+    padding-top: 42px;
+    box-sizing: border-box;
+}
+#cinema_select>h2:nth-child(1) {
+    width: 400px;
+    margin-left: 50px;
+}
+
+#cinema_select>h2:nth-child(2) {
+    width: 744px;
+}
+
+#cinema_select>ul {
+    display: inline;
+    /* display: flex;
+    justify-content: space-between; */
+    width: 1100px;
+    height: 570px;
+}
+
+#cinema_select>ul>li {
+    height: 570px;
+    box-sizing: border-box;
+    float: left;
+    margin-bottom: 45px;
+}
+
+/* 영화관별 > 영화 선택 */
+
+#movieName {
+    width: 400px;
+    margin-left: 53px;
+}
+
+
+#movieFirst {
+    width: 400px;
+    height: 570px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: auto;
+}
+
+#movieFirst>label {
+    display: block;
+    width: 379px;
+    line-height: 54px;
+    padding-left: 21px;
+    cursor: pointer;
+}
+
+#movieFirst>label:hover {
+    background-color: rgb(248, 248, 248);
+}
+
+.cinema_select_movieClick {
+    background-color: rgb(248, 248, 248);
+}
+
+#cinema_select>ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 영화관별 > 날짜,요일 */
+
+#dayNtime {
+    width: 700px;
+    border: 1px solid #ddd;
+    border-left: 0px;
+}
+
+#dayNtime>div:nth-child(1) {
+    height: 83px;
+    margin-top: 23px;
+    border-bottom: 1px solid #ddd;
+}
+
+#dayNtime>div>ul{
+    display: inline;
+    vertical-align: top;
+}
+
+#dayNtime>div>ul>li {
+    text-align: center;
+    float: left;
+}
+
+#dayNtime>div>ul>li>ul>li:first-child>span {
+    display: block;
+    height: 20px;
+    font-size: 0.8em;
+    line-height: 20px;
+    border-radius: 10px;
+}
+
+.leftNright {
+    width: 39px;
+    height: 83px;
+    cursor: pointer;
+}
+
+.leftNright>ul>li {
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.day {
+    width: 77.5px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.day>ul {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.dayClick {
+    border-bottom: 3px solid red;
+}
+
+.day>ul>li:nth-child(1) {
+    display: block;
+    width: 77.5px;
+    height: 20px;
+}
+
+
+.day>ul>li:nth-child(1)>span {
+    border: 1px solid #ddd;
+}
+
+.day>ul>li>div {
+    width: 77.5px;
+    height: 20px;
+    color: black;
+    margin-top: 7px;
+}
+
+
+.day>ul>li>a:hover {
+    border-bottom: 3px solid rgba(255,0,0,0.3);
+}
+
+#dayNtime>div>ul>li:nth-child(7)>ul>li:nth-child(2)>a,
+#dayNtime>div>ul>li:nth-child(8)>ul>li:nth-child(2)>a{
+    color: red;
+}
+
+/* 영화관별 > 시간테이블 */
+
+.timeTable {
+    width: 657px;
+    height: 390px;
+    margin-top: 40px;
+    padding-left: 10px;
+    text-overflow: ellipsis;
+    overflow: auto;
+}
+
+.timeTable>p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.timeTable>ul {
+    display: inline;
+}
+
+.timeTable>ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.timeTable>ul>li {
+    float: left;
+}
+
+.timeTable>ul>li>a {
+    display: inline-block;
+    width: 140px;
+    height: 80px;
+    padding: 0 30px;
+    border: 1px solid #666;
+    border-radius: 10px;
+    background-image: linear-gradient(180deg, #fff, #eee);
+    margin: 0 15px 15px 0;
+}
+
+.timeTable>ul>li>a:hover {
+    opacity: 40%;
+    border-color: white;
+    box-shadow: 0 0 10px black;
+}
+
+.timeTable>ul>li>a>h2 {
+    color: black;
+    padding: 10px 0;
+}
+
+.timeTable>ul>li>a>div {
+    text-align: left;
+    vertical-align: top;
+}
+
+.timeTable>ul>li>a>div>p {
+    color: black;
+    display: inline-block;
+}
+
+.timeTable>ul>li>a>div>p:nth-child(1) {
+    width: 100px;
+}
+
+.timeTable>ul>li>a>div>p:nth-child(2) {
+    width: 40px;
+    text-align: right;
+}
+
+.timeTable>ul>li>a>div>p>span {
+    color: #468e00;
+}
+
+
+/* 영화관별 끝 */
+
+/* 영화별 상단 */
+
+#movie {
+    position: absolute;
+    width: 1200px;
+    height: 400px;
+    padding: 25px 30px;
+    box-sizing: border-box;
+}
+
+#movie>ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie_list {
+    display: inline;
+    width: 375px;
+    height: 350px;
+}
+
+.movie_list>form {
+    display: inline-block;
+    width: 375px;
+    height: 350px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: auto;
+}
+
+.movie_list>form>label {
+    display: block;
+    width: 354px;
+    line-height: 54px;
+    padding-left: 21px;
+    cursor: pointer;
+}
+
+.movie_list>form>label:hover {
+    background-color: rgb(248, 248, 248);
+}
+
+.movieFirstClick {
+    background-color: rgb(248, 248, 248);
+}
+
+
+.movie_poster {
+    width: 243px;
+    margin-left: 30px;
+}
+
+.movie_poster>div {
+    display: inline-block;
+    width: 243px;
+    height: 350px;
+    background-image: url(../img/movie1.jpg);
+}
+
+.movie_info {
+    width: 462px;
+    margin-left: 30px;
+}
+
+.movie_info>ul {
+    display: inline-block;
+    width: 462px;
+    height: 40px;
+}
+
+.movie_info>ul:nth-child(1)>li {
+    display: inline;
+    float: left;
+}
+
+.movie_info>ul:nth-child(1) {
+    height: 30px;
+    margin-top: 10px;
+}
+
+.movie_info>ul:nth-child(1)>li:nth-child(1)>span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #00c0ff;
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    margin-right: 10px;
+}
+
+.movie_info>ul:nth-child(1)>li:nth-child(2)>h2 {
+    display: inline-block;
+    margin-right: 20px;
+    color: black;
+}
+
+#moive_share {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    background-image: url(../img/icon_share_g.png);
+}
+#movie_like {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    background-image: url(../img/icon_like.png);
+}
+
+.movie_info>ul:nth-child(1)>li:nth-child(5)>p {
+    line-height: 30px;
+    font-size: 0.8em;
+}
+
+.movie_info>ul:nth-child(1)>li:nth-child(5)>p>span {
+    color: red;
+}
+
+.movie_info>ul:nth-child(2) {
+    margin: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.movie_info>ul:nth-child(2)>li {
+    display: inline;
+    float: left;
+    margin-right: 20px;
+    font-size: 0.8em;
+    color: black;
+}
+
+.movie_info>ul:nth-child(2)>li>span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+}
+
+.movie_info>ul:nth-child(2)>li:nth-child(1)>span:nth-child(1) {
+    color: #ffcc00;
+}
+
+.movie_info>div {
+    height: 200px;
+    box-sizing: border-box;
+}
+
+
+.movie_info>div>ul>li {
+    display: inline;
+    font-size: 0.9em;
+    color: black;
+    line-height: 1.3em;
+    float: left;
+}
+
+.movie_info>div>ul>li:nth-child(1) {
+    width: 30px;
+    font-weight: bold;
+    margin-right: 7px;
+}
+
+.movie_info>div>ul>li:nth-child(2) {
+    width: 425px;
+    margin-bottom: 10px;
+}
+
+.movie_info>p {
+    width: 462px;
+    text-align: right;
+    font-size: 0.7em;
+}
+
+/* 영화별 하단 */
+
+#movie_select{
+    position: absolute;
+    width: 1200px;
+    border: 3px solid #ddd;
+    border-radius: 30px;
+    margin-bottom: 54px;
+}
+
+#movie_select>h2 {
+    display: inline-block;
+    height: 85px;
+    padding-top: 42px;
+    box-sizing: border-box;
+}
+#movie_select>h2:nth-child(1) {
+    width: 400px;
+    margin-left: 50px;
+}
+
+#movie_select>h2:nth-child(2) {
+    width: 744px;
+}
+
+#movie_select>ul {
+    display: inline;
+    width: 1100px;
+    height: 570px;
+}
+
+#movie_select>ul>li {
+    height: 570px;
+    box-sizing: border-box;
+    float: left;
+    margin-bottom: 45px;
+    cursor: pointer;
+}
+
+
+/* 영화별 > 영화관 선택 */
+
+#cinema_do>ul {
+    margin-left: 53px;
+}
+
+#cinema_do>ul, #cinema_seoul>ul {
+    width: 200px;
+    height: 570px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: auto;
+}
+
+#cinema_do>ul>li, #cinema_seoul>ul>li {
+    display: block;
+    width: 379px;
+    line-height: 54px;
+    padding-left: 21px;
+}
+
+#cinema_do>ul>li:hover, #cinema_seoul>ul>li:hover {
+    background-color: rgb(248, 248, 248);
+}
+
+.movie_select_doClick, .movie_select_siClick {
+    background-color: rgb(248, 248, 248);
+}

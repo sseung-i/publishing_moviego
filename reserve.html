@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>
+            MOVIEGO에 오신것을 환영합니다!
+        </title>
+        <meta charset="utf-8">
+        <link href="css/reserve.css" rel="stylesheet">
+        <link href="css/sub_nav.css" rel="stylesheet">
+        <script src="js/jquery-1.12.3.js"></script>
+        <script src="js/reserve.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="index.html"><img id="logo" src="img/logo_2.png" alt="logo"></a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="movie_all.html">영화</a></li>
+                    <li><a href="reserve.html" class="nownav">예매</a></li>
+                    <li><a href="cinema.html">영화관</a></li>
+                    <li><a href="eventall.html">이벤트&혜택</a></li>
+                    <li><a href="shop.html">무비고샵</a></li>
+                </ul>
+            </nav>
+            <div class="loginMenu">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="nowPage">
+            <ul>
+                <li><a href="#"><img src="img/home_icon.png"></a></li>
+                <li>&nbsp;&gt;&nbsp;<a href="#"> 예매 </a>&nbsp;&gt;&nbsp;</li>
+                <li><a href="#"> 빠른예매 </a>&nbsp;</li>
+            </ul>
+        </div>
+        <section class="choice">
+            <h2>빠른예매</h2>
+            <div>
+                <ul>
+                    <li id="cinemaBgcolor"><h2>영화관별</h2></li>
+                    <li id="movieBgcolor"><h2>영화별</h2></li>
+                </ul>
+                <div id="cinema">
+                    <ul>
+                        <li>MY 영화관</li>
+                        <li class="cinemaClick">서울</li>
+                        <li>경기/인천</li>
+                        <li>충청/대전</li>
+                        <li>전라/광주</li>
+                        <li>경북/대구</li>
+                        <li>경남/부산/울산</li>
+                        <li>강원</li>
+                        <li>제주</li>
+                    </ul>
+                    <form id="soeul" method="GET">
+                        <input type="radio" name="place" value="가산디지털" id="gasandi" checked><label for="gasandi" class="placeClick">가산디지털</label>
+                        <input type="radio" name="place" value="가양" id="gayang"><label for="gayang">가양</label>
+                        <input type="radio" name="place" value="강동" id="gangdong"><label for="gangdong">강동</label>
+                        <input type="radio" name="place" value="건대입구" id="gundae"><label for="gundae">건대입구</label>
+                        <input type="radio" name="place" value="김포공항" id="kinpoair"><label for="kinpoair">김포공항</label>
+                        <input type="radio" name="place" value="노원" id="nowon"><label for="nowon">노원</label>
+                        <input type="radio" name="place" value="도곡" id="dogok"><label for="dogok">도곡</label>
+                        <input type="radio" name="place" value="독산" id="doksan"><label for="doksan">독산</label>
+                        <input type="radio" name="place" value="브로드웨이(신사)" id="sinsa"><label for="sinsa">브로드웨이(신사)</label>
+                        <input type="radio" name="place" value="서울대입구" id="seoulUNI"><label for="seoulUNI">서울대입구</label>
+                        <input type="radio" name="place" value="수락산" id="suraksan"><label for="suraksan">수락산</label>
+                        <input type="radio" name="place" value="수유" id="suyu"><label for="suyu">수유</label>
+                        <input type="radio" name="place" value="신도림" id="sindorim"><label for="sindorim">신도림</label>
+                        <input type="radio" name="place" value="신림" id="sinrim"><label for="sinrim">신림</label>
+                        <input type="radio" name="place" value="이베뉴엘(명동)" id="myungdong"><label for="myungdong">에비뉴엘(명동)</label>
+                        <input type="radio" name="place" value="영등포" id="youndeungpo"><label for="youndeungpo">영등포</label>
+                        <input type="radio" name="place" value="용산" id="yongsan"><label for="yongsan">용산</label>
+                        <input type="radio" name="place" value="월드타워" id="woldtower"><label for="woldtower">월드타워</label>
+                        <input type="radio" name="place" value="은평(롯대몰)" id="eunpyung"><label for="eunpyung">은평(롯데몰)</label>
+                        <input type="radio" name="place" value="장안" id="jangan"><label for="jangan">장안</label>
+                        <input type="radio" name="place" value="중랑" id="jungrang"><label for="jungrang">중랑</label>
+                        <input type="radio" name="place" value="청량리" id="chungryang"><label for="chungryang">청량리</label>
+                        <input type="radio" name="place" value="합정" id="hapjung"><label for="hapjung">합정</label>
+                        <input type="radio" name="place" value="홍대입구" id="hongdae"><label for="hongdae">홍대입구</label>
+                    </form>
+                </div>
+                <div id="movie">
+                    <ul>
+                        <li class="movie_list">
+                            <form method="GET">
+                                <input type="radio" name="movieName1" value="고질라 VS. 콩" id="godzillaVSkong" checked><label for="godzillaVSkong" class="movieFirstClick"><span class="age12">12</span>고질라 VS. 콩</label>
+                                <input type="radio" name="movieName1" value="극장판 귀멸의 칼날 : 무한열차편" id="guimyul"><label for="guimyul"><span class="age15">15</span>극장판 귀멸의 칼날 : 무한열차편</label>
+                                <input type="radio" name="movieName1" value="자산어보" id="jasan"><label for="jasan"><span class="age15">12</span>자산어보</label>
+                                <input type="radio" name="movieName1" value="미나리" id="minari"><label for="minari"><span class="age15">12</span>미나리</label>
+                                <input type="radio" name="movieName1" value="라야와 마지막 드래곤" id="lastdragon"><label for="lastdragon"><span class="ageall">전체</span>라야와 마지막 드래곤</label>
+                                <input type="radio" name="movieName1" value="트웬티 해커" id="twenty"><label for="twenty"><span class="age15">15</span>트웬티 해커</label>
+                                <input type="radio" name="movieName1" value="최면" id="choimyun"><label for="choimyun"><span class="age15">15</span>최면</label>
+                                <input type="radio" name="movieName1" value="소울" id="soul"><label for="soul"><span class="ageall">전체</span>소울</label>
+                                <input type="radio" name="movieName1" value="스파이의 아내" id="spywife"><label for="spywife"><span class="age12">12</span>스파이의 아내</label>
+                                <input type="radio" name="movieName1" value="중경상림" id="junggyung"><label for="junggyung"><span class="age15">15</span>중경상림</label>
+                                <input type="radio" name="movieName1" value="해길랍" id="haegillrap"><label for="haegillrap"><span class="age15">15</span>해길랍</label>
+                                <input type="radio" name="movieName1" value="반지의 제왕 : 왕의 귀환" id="ringking"><label for="ringking"><span class="age12">12</span>반지의 제왕 : 왕의 귀환</label>
+                                <input type="radio" name="movieName1" value="죽은 시인의 사회" id="die"><label for="die"><span class="age12">12</span>죽은 시인의 사회</label>
+                                <input type="radio" name="movieName1" value="부활 : 그 증거" id="buhwal"><label for="buhwal"><span class="age12">12</span>부활 : 그 증거</label>
+                            </form>
+                        </li>
+                        <li class="movie_poster">
+                            <div></div>
+                        </li>
+                        <li class="movie_info">
+                            <ul>
+                                <li>
+                                    <span>12</span>
+                                </li>
+                                <li>
+                                    <h2>고질라 VS. 콩</h2>
+                                </li>
+                                <li>
+                                    <a href="#" id="moive_share"></a>
+                                </li>
+                                <li>
+                                    <a href="#" id="movie_like"></a>
+                                </li>
+                                <li>
+                                    <p><span>❤︎</span>123</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    관람객 평점 <span>★</span><span>8.4</span>
+                                </li>
+                                <li>
+                                    예매율 1위 <span>36.9%</span>
+                                </li>
+                                <li>
+                                    누적관객수 <span>80,024명</span>
+                                </li>
+                            </ul>
+                            <div>
+                                <ul>
+                                    <li>
+                                        장르
+                                    </li>
+                                    <li>
+                                        액션/미국 | 2021.03.25개봉 | 113분
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        감독
+                                    </li>
+                                    <li>
+                                        애덤 원가드
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        출연
+                                    </li>
+                                    <li>
+                                        알렉산더 스카스가드, 밀리 바비 브라운, 레베카 홀, 카일 챈들러, 오구리 슌, 에이사 곤살레스
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        시놉시스
+                                    </li>
+                                    <li>
+                                        두 전설의 충돌, 사상 최강 빅매치! 승자는 정해진다!
+                                    거대 몬스터들의 습격을 받은 지 3년 후, 콩은 스컬 아일랜드를 떠나 인간들의
+                                    보호관찰을 받고 있다. 한편, 인간들에게 등을 돌린 고질라는 …
+                                    </li>
+                                </ul>
+                            </div>
+                            <p><a href="#">+ 더보기</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="select">
+            <div id="cinema_select">
+                <h2>영화</h2><h2>날짜/시간</h2>
+                <ul>
+                    <li id="movieName">
+                        <form id="movieFirst" method="GET">
+                            <input type="radio" name="movieName2" value="고질라 VS. 콩" id="godzillaVSkong2" checked><label for="godzillaVSkong2" class="cinema_select_movieClick"><span class="age12">12</span>고질라 VS. 콩</label>
+                            <input type="radio" name="movieName2" value="부활 : 그 증거" id="guimyul2"><label for="guimyul2"><span class="age15">15</span>극장판 귀멸의 칼날 : 무한열차편</label>
+                            <input type="radio" name="movieName2" value="자산어보" id="jasan2"><label for="jasan2"><span class="age15">15</span>자산어보</label>
+                            <input type="radio" name="movieName2" value="미나리" id="minari2"><label for="minari2"><span class="age15">15</span>미나리</label>
+                            <input type="radio" name="movieName2" value="라야와 마지막 드래곤" id="lastdragon2"><label for="lastdragon2"><span class="ageall">전체</span>라야와 마지막 드래곤</label>
+                            <input type="radio" name="movieName2" value="트웬티 해커" id="twenty2"><label for="twenty2"><span class="age15">15</span>트웬티 해커</label>
+                            <input type="radio" name="movieName2" value="최면" id="choimyun2"><label for="choimyun2"><span class="age15">15</span>최면</label>
+                            <input type="radio" name="movieName2" value="소울" id="soul2"><label for="soul2"><span class="ageall">전체</span>소울</label>
+                            <input type="radio" name="movieName2" value="스파이의 아내" id="spywife2"><label for="spywife2"><span class="age12">12</span>스파이의 아내</label>
+                            <input type="radio" name="movieName2" value="중경상림" id="junggyung2"><label for="junggyung2"><span class="age15">15</span>중경상림</label>
+                            <input type="radio" name="movieName2" value="해길랍" id="haegillrap2"><label for="haegillrap2"><span class="age15">15</span>해길랍</label>
+                            <input type="radio" name="movieName2" value="반지의 제왕 : 왕의 귀환" id="ringking2"><label for="ringking2"><span class="age12">12</span>반지의 제왕 : 왕의 귀환</label>
+                            <input type="radio" name="movieName2" value="죽은 시인의 사회" id="die2"><label for="die2"><span class="age12">12</span>죽은 시인의 사회</label>
+                            <input type="radio" name="movieName2" value="부활 : 그 증거" id="buhwal2"><label for="buhwal2"><span class="age12">12</span>부활 : 그 증거</label>
+                        </form>
+                    </li>
+                    <li id="dayNtime">
+                        <div>
+                            <ul class="daychange">
+                                <li class="leftNright">
+                                    <ul>
+                                        <li>&lt;</li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul class="dayClick">
+                                        <li><span>2021.03</span></li>
+                                        <li><div class="confirmday">29</div><div>오늘</div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="leftNright">
+                                    <ul>
+                                        <li>&gt;</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="timeTable">
+                            <p>2D</p>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <h2 class="confirmTime">09:00</h2>
+                                        <div><p><span>151</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>10:40</h2>
+                                        <div><p><span>212</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>11:10</h2>
+                                        <div><p><span>162</span> / 188</p><p>3관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>12:20</h2>
+                                        <div><p><span>257</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>13:00</h2>
+                                        <div><p><span>28</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>13:20</h2>
+                                        <div><p><span>92</span> / 188</p><p>3관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>14:20</h2>
+                                        <div><p><span>186</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>16:00</h2>
+                                        <div><p><span>164</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <p>3D</p>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <h2>09:00</h2>
+                                        <div><p><span>151</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>10:40</h2>
+                                        <div><p><span>212</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>11:10</h2>
+                                        <div><p><span>162</span> / 188</p><p>3관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>12:20</h2>
+                                        <div><p><span>257</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>13:00</h2>
+                                        <div><p><span>28</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>13:20</h2>
+                                        <div><p><span>92</span> / 188</p><p>3관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>14:20</h2>
+                                        <div><p><span>186</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="movie_select">
+                <h2>영화관</h2><h2>날짜/시간</h2>
+                <ul>
+                    <li id="cinema_do">
+                        <ul>
+                            <li class="movie_select_doClick">MY 영화관</li>
+                            <li>서울</li>
+                            <li>경기/인천</li>
+                            <li>충청/대전</li>
+                            <li>전라/광주</li>
+                            <li>경북/대구</li>
+                            <li>경남/부산/울산</li>
+                            <li>강원</li>
+                            <li>제주</li>
+                        </ul>
+                    </li>
+                    <li id="cinema_seoul">
+                        <ul>
+                            <li class="movie_select_siClick">가산디지털</li>
+                            <li>가양</li>
+                            <li>강동</li>
+                            <li>건대입구</li>
+                            <li>김포공항</li>
+                            <li>노원</li>
+                            <li>도곡</li>
+                            <li>독산</li>
+                            <li>브로드웨이(신사)</li>
+                            <li>서울대입구</li>
+                            <li>수락산</li>
+                            <li>수유</li>
+                            <li>신도림</li>
+                            <li>신림</li>
+                            <li>에비뉴엘(명동)</li>
+                            <li>영등포</li>
+                            <li>용산</li>
+                            <li>월드타워</li>
+                            <li>은평(롯데몰)</li>
+                            <li>장안</li>
+                            <li>중랑</li>
+                            <li>청량리</li>
+                            <li>합정</li>
+                            <li>홍대입구</li>
+                        </ul>
+                    </li>
+                    <li id="dayNtime">
+                        <div>
+                            <ul class="daychange2">
+                                <li class="leftNright">
+                                    <ul>
+                                        <li>&lt;</li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul class="dayClick">
+                                        <li><span>2021.03</span></li>
+                                        <li><div>29</div><div>오늘</div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="day">
+                                    <ul>
+                                        <li></li>
+                                        <li><div></div><div></div></li>
+                                    </ul>
+                                </li>
+                                <li class="leftNright">
+                                    <ul>
+                                        <li>&gt;</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="timeTable">
+                            <p>2D</p>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <h2 id="time">09:00</h2>
+                                        <div><p><span>151</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>10:40</h2>
+                                        <div><p><span>212</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>11:10</h2>
+                                        <div><p><span>162</span> / 188</p><p>3관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>12:20</h2>
+                                        <div><p><span>257</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>13:00</h2>
+                                        <div><p><span>28</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>13:20</h2>
+                                        <div><p><span>92</span> / 188</p><p>3관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>14:20</h2>
+                                        <div><p><span>186</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>16:00</h2>
+                                        <div><p><span>164</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <p>3D</p>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <h2>09:00</h2>
+                                        <div><p><span>151</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>10:40</h2>
+                                        <div><p><span>212</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>11:10</h2>
+                                        <div><p><span>162</span> / 188</p><p>3관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>12:20</h2>
+                                        <div><p><span>257</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>13:00</h2>
+                                        <div><p><span>28</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>13:20</h2>
+                                        <div><p><span>92</span> / 188</p><p>3관</p></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h2>14:20</h2>
+                                        <div><p><span>186</span> / 277</p><p>1관</p></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="ad">
+            <a href="#"><img src="img/add.png" alt="카드광고"></a>
+        </div>
+        <footer>
+            <div class="info">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">인재채용</a></li>
+                    <li><a href="#">사회공헌</a></li>
+                    <li><a href="#">제휴/광고/부대사업문의</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">윤리경영</a></li>
+                </ul>
+                <p>서울특별시 마포구 월드컵로 240, 지상2층(성산동, 월드컵주경기장) ARS 1544-0070</p>
+                <p>대표자명 김진선 · 개인정보보호책임자 조상연 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 제 833호</p>
+                <p>COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
+            </div>
+            <ul class="sns">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>                        
+            </ul>
+        </footer>
+    </body>
+</html>
